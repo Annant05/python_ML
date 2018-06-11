@@ -29,4 +29,29 @@
 
 # TODO: Create a program with above instructions
 
+# print("Enter in following manner N x , S x , W x , E x  Where x is distance and N,S,W,E representws the direction\n")
+direct_m = {'N': 0, 'S': 0, 'W': 0, 'E': 0}
 
+n = int(input("Enter No of directions "))
+for i in range(n):
+    ch = input("Enter which direction you are going with distance : \t").upper().strip()
+
+    if ch == "N" or ch == "NORTH":
+        dist = direct_m['N'] + int(input("Enter distance traveled in NORTH direction : \t "))
+        direct_m.update({'N': dist})
+    elif ch == "S" or ch == "SOUTH":
+        dist = direct_m['S'] + int(input("Enter distance traveled in SOUTH direction : \t "))
+        direct_m.update({'S': dist})
+    elif ch == "W" or ch == "WEST":
+        dist = direct_m['W'] + int(input("Enter distance traveled in WEST direction : \t "))
+        direct_m.update({'W': dist})
+    elif ch == "E" or ch == "EAST":
+        dist = direct_m['E'] + int(input("Enter distance traveled in EAST direction : \t "))
+        direct_m.update({'E': dist})
+
+print(direct_m)
+
+x = direct_m['E'] - direct_m['W']
+y = direct_m['N'] - direct_m['S']
+
+print("X : " + str(x) + " \t Y : " + str(y))

@@ -7,19 +7,19 @@ for line in data:
 
 for split1 in lis_line:
     print("WORD COUNT " + str(len(split1)))
-    wordarray = []
-    countarray = []
+    word_array = []
+    count_array = []
     for i in split1:
-        if i in wordarray:
+        if i in word_array:
             continue
         else:
-            wordarray.append(i)
-            countarray.append(split1.count(i))
+            word_array.append(i)
+            count_array.append(split1.count(i))
 
-    most_frequent_count = max(countarray)
-    max_index = countarray.index(most_frequent_count)
+    most_frequent_count = max(count_array)
+    max_index = count_array.index(most_frequent_count)
 
-    for i in range(int(len(wordarray) - 1)):
-        print(" The count : " + str(countarray[i]) + " \t\tAnd Word : " + wordarray[i])
+    for i in range(int(len(word_array) - 1)):
+        print(" The count : " + str(count_array[i]) + " \t\tAnd Word : " + word_array[i])
 
-    print(wordarray[max_index])
+    print(word_array[max_index])
