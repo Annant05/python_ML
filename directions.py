@@ -30,6 +30,9 @@
 # TODO: Create a program with above instructions
 
 # print("Enter in following manner N x , S x , W x , E x  Where x is distance and N,S,W,E representws the direction\n")
+
+from math import sqrt
+
 direct_m = {'N': 0, 'S': 0, 'W': 0, 'E': 0}
 
 n = int(input("Enter No of directions "))
@@ -55,3 +58,6 @@ x = direct_m['E'] - direct_m['W']
 y = direct_m['N'] - direct_m['S']
 
 print("X : " + str(x) + " \t Y : " + str(y))
+
+dist_from_origin = int(sqrt((x * x) + (y * y)))
+print("The distance from origin is  :  " + str(dist_from_origin))
