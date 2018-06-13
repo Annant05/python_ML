@@ -63,7 +63,10 @@ new_dic = (no_of_times(word_dictionary.copy()))
 # for i in new_dic:
 #     print("\nWord is : " + i + "\t" + str(new_dic[i]))
 
-for elem in new_dic["THE"]:
-    theword, count = elem.split("__")
-    print(theword + "\t" + str(count) + "\t")
+for key in new_dic.keys():
+    print("\n" + key)
+    for elem in new_dic[key]:
+        theword, count = elem.split("__")
+        print(theword + "\t" + str(count))
+
 # print("Word is : " + "THE" + "\t Count" + str(new_dic))
