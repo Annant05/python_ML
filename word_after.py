@@ -16,8 +16,7 @@ for split_words in lis_line:
     for i in split_words:
         word_array.append(i)
 
-        # Consider the above code as declaration
-
+# Consider the above code as declaration
 
 def next_word_list(word):
     count = 0
